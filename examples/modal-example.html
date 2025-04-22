@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Component Examples</title>
+    <link rel="stylesheet" href="../css/modal.css">
+    <style>
+        /* Demo page styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        
+        .example-section {
+            margin-bottom: 2rem;
+        }
+        
+        .button-container {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            border: 1px solid transparent;
+            background-color: #f3f4f6;
+            color: #374151;
+            border-color: #d1d5db;
+        }
+        
+        .btn:hover {
+            background-color: #e5e7eb;
+        }
+        
+        .btn-primary {
+            background-color: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2563eb;
+        }
+        
+        .code-example {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Modal Component Examples</h1>
+    
+    <div class="example-section">
+        <h2>Basic Modal Example</h2>
+        <p>Click the button below to open a basic modal dialog.</p>
+        
+        <div class="button-container">
+            <button class="btn btn-primary" data-modal-target="basic-modal">Open Basic Modal</button>
+        </div>
+        
+        <!-- Basic Modal Structure -->
+        <div id="basic-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="basic-modal-title">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3 id="basic-modal-title" class="modal-title">Basic Modal</h3>
+                    <button class="modal-close" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>This is a basic modal dialog example. It has a header, body, and footer.</p>
+                    <p>The modal can be closed by clicking the X button, clicking outside the modal, or pressing the ESC key.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="modal-btn modal-btn-secondary" data-modal-close>Cancel</button>
+                    <button class="modal-btn modal-btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="example-section">
+        <h2>Modal with Form</h2>
+        <p>A more complex example with a form inside the modal.</p>
+        
+        <div class="button-container">
+            <button class="btn btn-primary" data-modal-target="form-modal">Open Form Modal</button>
+        </div>
+        
+        <!-- Form Modal Structure -->
+        <div id="form-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="form-modal-title">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3 id="form-modal-title" class="modal-title">Contact Form</h3>
+                    <button class="modal-close" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="contact-form">
+                        <div class="modal-form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="modal-form-control" required>
+                        </div>
+                        <div class="modal-form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="modal-form-control" required>
+                        </div>
+                        <div class="modal-form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="modal-form-control" rows="4" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="modal-btn modal-btn-secondary" data-modal-close>Cancel</button>
+                    <button class="modal-btn modal-btn-primary" id="submit-form">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="example-section">
+        <h2>Different Modal Sizes</h2>
+        <p>Modals can have different sizes using the provided CSS classes.</p>
+        
+        <div class="button-container">
+            <button class="btn" data-modal-target="small-modal">Small Modal</button>
+            <button class="btn" data-modal-target="default-modal">Default Modal</button>
+            <button class="btn" data-modal-target="large-modal">Large Modal</button>
+        </div>
+        
+        <!-- Small Modal -->
+        <div id="small-modal" class="modal modal-sm" aria-hidden="true" role="dialog">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3 class="modal-title">Small Modal</h3>
+                    <button class="modal-close" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>This is a small-sized modal.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Default Modal -->
+        <div id="default-modal" class="modal" aria-hidden="true" role="dialog">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3 class="modal-title">Default Modal</h3>
+                    <button class="modal-close" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>This is a default-sized modal.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Large Modal -->
+        <div id="large-modal" class="modal modal-lg" aria-hidden="true" role="dialog">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3 class="modal-title">Large Modal</h3>
+                    <button class="modal-close" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>This is a large-sized modal with more content space.</p>
+                    <p>It's useful for displaying more complex content, tables, or larger forms.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="example-section">
+        <h2>Different Animation Types</h2>
+        <p>Modals can have different animation styles.</p>
+        
+        <div class="button-container">
+            <button class="btn" data-modal-target="fade-modal">Fade Animation</button>
+            <button class="btn" data-modal-target="slide-up-modal">Slide Up Animation</button>
+            <button class="btn" data-modal-target="zoom-modal">Zoom Animation</button>
+        </div>
+        
+        <!-- Fade Modal -->
+        <div id="fade-modal" class="modal modal-fade" aria-hidden="true" role="dialog">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3 class="modal-title">Fade Animation</h3>
+                    <button class="modal-close" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>This modal uses a simple fade animation.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide Up Modal -->
+        <div id="slide-up-modal" class="modal modal-slide-up" aria-hidden="true" role="dialog">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3 class="modal-title">Slide Up Animation</h3>
+                    <button class="modal-close" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>This modal slides up from the bottom.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Zoom Modal -->
+        <div id="zoom-modal" class="modal modal-zoom" aria-hidden="true" role="dialog">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3 class="modal-title">Zoom Animation</h3>
+                    <button class="modal-close" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>This modal uses a zoom animation effect.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="example-section">
+        <h2>Programmatic Control</h2>
+        <p>You can also control modals programmatically using JavaScript.</p>
+        
+        <div class="button-container">
+            <button class="btn" id="open-programmatic">Open Modal via JS</button>
+            <button class="btn" id="close-all">Close All Modals</button>
+        </div>
+        
+        <!-- Programmatic Modal -->
+        <div id="programmatic-modal" class="modal" aria-hidden="true" role="dialog">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3 class="modal-title">Programmatic Control</h3>
+                    <button class="modal-close" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>This modal was opened programmatically using JavaScript.</p>
+                    <div class="code-example">
+// Open a specific modal
+Modal.open('modal-id');
+
+// Close a specific modal
+Modal.close('modal-id');
+
+// Close all open modals
+Modal.closeAll();
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="example-section">
+        <h2>Event Handling</h2>
+        <p>The modal system dispatches custom events that you can listen for.</p>
+        
+        <div class="button-container">
+            <button class="btn" data-modal-target="event-modal">Modal with Events</button>
+        </div>
+        
+        <div id="event-log" class="code-example">
+            Event log will appear here...
+        </div>
+        
+        <!-- Event Modal -->
+        <div id="event-modal" class="modal" aria-hidden="true" role="dialog">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3 class="modal-title">Event Handling</h3>
+                    <button class="modal-close" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>This modal demonstrates event handling. Open and close it to see events logged above.</p>
+                    <div class="code-example">
+// Listen for modal open event
+document.getElementById('modal-id').addEventListener('modal:open', function(e) {
+    console.log('Modal opened!', e.detail);
+});
+
+// Listen for modal close event
+document.getElementById('modal-id').addEventListener('modal:close', function(e) {
+    console.log('Modal closed!', e.detail);
+});
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Include the Modal JavaScript -->
+    <script src="../js/modal.js"></script>
+    
+    <script>
+        // Initialize all modals when the DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize the Modal library
+            Modal.init();
+            
+            // Setup programmatic control example
+            document.getElementById('open-programmatic').addEventListener('click', function() {
+                Modal.open('programmatic-modal');
+            });
+            
+            document.getElementById('close-all').addEventListener('click', function() {
+                Modal.closeAll();
+            });
+            
+            // Setup form submission (just for demo)
+            document.getElementById('submit-form').addEventListener('click', function() {
+                const form = document.getElementById('contact-form');
+                if (form.checkValidity()) {
+                    alert('Form would be submitted in a real application');
+                    Modal.close('form-modal');
+                } else {
+                    form.reportValidity();
+                }
+            });
+            
+            // Setup event logging
+            const eventModal = document.getElementById('event-modal');
+            const eventLog = document.getElementById('event-log');
+            
+            eventModal.addEventListener('modal:open', function(e) {
+                const timestamp = new Date().toLocaleTimeString();
+                eventLog.textContent = `${timestamp}: Modal opened\n${eventLog.textContent}`;
+            });
+            
+            eventModal.addEventListener('modal:close', function(e) {
+                const timestamp = new Date().toLocaleTimeString();
+                eventLog.textContent = `${timestamp}: Modal closed\n${eventLog.textContent}`;
+            });
+        });
+    </script>
+</body>
+</html> 
+</html> 
