@@ -1,11 +1,11 @@
 {
-  "name": "Modal Component",
-  "short_name": "Modal",
-  "description": "A lightweight, customizable, and accessible modal dialog component",
+  "name": "Dipan Sen",
+  "short_name": "Dipan",
+  "description": "Personal portfolio of Dipan Sen, Full Stack Web Developer",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#3b82f6",
+  "theme_color": "#0066cc",
   "icons": [
     {
       "src": "images/icon-192x192.png",

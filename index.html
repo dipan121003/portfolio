@@ -3,40 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A lightweight, customizable, and accessible modal dialog component for web applications">
-    <meta name="keywords" content="modal, dialog, web component, javascript, css, accessible, responsive">
+    <meta name="description" content="Personal portfolio website of Dipan Sen, Full Stack Web Developer">
+    <meta name="keywords" content="web development, full stack developer, portfolio, Dipan Sen">
     <meta name="author" content="Dipan Sen">
-    <meta name="theme-color" content="#3b82f6">
+    <meta name="theme-color" content="#0066cc">
     
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Modal Component">
-    <meta property="og:description" content="A lightweight, customizable, and accessible modal dialog component for web applications">
+    <meta property="og:title" content="Dipan Sen - Full Stack Web Developer">
+    <meta property="og:description" content="Personal portfolio website of Dipan Sen, Full Stack Web Developer">
     <meta property="og:image" content="images/og-image.jpg">
-    <meta property="og:url" content="https://modalcomponent.yourdomain.com">
+    <meta property="og:url" content="https://dipansen.yourdomain.com">
     <meta property="og:type" content="website">
     
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Modal Component">
-    <meta name="twitter:description" content="A lightweight, customizable, and accessible modal dialog component for web applications">
+    <meta name="twitter:title" content="Dipan Sen - Full Stack Web Developer">
+    <meta name="twitter:description" content="Personal portfolio website of Dipan Sen, Full Stack Web Developer">
     <meta name="twitter:image" content="images/og-image.jpg">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://modalcomponent.yourdomain.com">
+    <link rel="canonical" href="https://dipansen.yourdomain.com">
     
     <!-- PWA Support -->
     <link rel="manifest" href="manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Modal Component">
+    <meta name="apple-mobile-web-app-title" content="Dipan Sen">
     
     <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="css/style.css" as="style">
     <link rel="preload" href="js/script.js" as="script">
-    <link rel="preload" href="css/modal.css" as="style">
-    <link rel="preload" href="js/modal.js" as="script">
     
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
@@ -45,14 +43,14 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     
-    <title>Modal Component - Lightweight and Accessible Dialog Library</title>
+    <title>Dipan Sen - Full Stack Web Developer</title>
     
     <!-- Critical CSS Inlined -->
     <style>
         :root {
-            --color-primary: #3b82f6;
-            --color-primary-dark: #2563eb;
-            --color-primary-light: rgba(59, 130, 246, 0.1);
+            --color-primary: #0066cc;
+            --color-primary-dark: #0055aa;
+            --color-primary-light: rgba(0, 102, 204, 0.1);
             --color-background: #ffffff;
             --color-background-alt: #f8f9fa;
             --color-text: #333333;
@@ -106,11 +104,7 @@
     
     <!-- Main CSS with media query for non-critical CSS -->
     <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/modal.css" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/modal.css">
-    </noscript>
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -125,7 +119,7 @@
     <div class="overlay"></div>
     <header>
         <div class="container header-container">
-            <a href="#" class="logo">Modal Component</a>
+            <a href="#" class="logo">Dipan Sen</a>
             
             <div class="theme-toggle" role="switch" aria-checked="false" id="themeToggle" tabindex="0" aria-label="Toggle dark mode">
                 <span class="theme-toggle-label theme-light">
@@ -148,9 +142,9 @@
             <nav>
                 <ul>
                     <li><a href="#" class="nav-link active" data-section="hero">Home</a></li>
-                    <li><a href="#features" class="nav-link" data-section="features">Features</a></li>
-                    <li><a href="#examples" class="nav-link" data-section="examples">Examples</a></li>
-                    <li><a href="https://github.com/yourusername/modal-component" class="nav-link">GitHub</a></li>
+                    <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                    <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                    <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -160,120 +154,143 @@
         <div class="container">
             <section id="hero" class="hero-section section-scroll" aria-labelledby="hero-heading" role="banner" data-section="hero">
                 <div class="hero-content">
-                    <h1 id="hero-heading" class="gradient-text scroll-animate fade-in">Modal Component</h1>
-                    <h2 class="scroll-animate fade-in-up" data-delay="200">A lightweight, accessible dialog library</h2>
+                    <h1 id="hero-heading" class="gradient-text scroll-animate fade-in">Dipan Sen</h1>
+                    <h2 class="scroll-animate fade-in-up" data-delay="200">Full Stack Web Developer</h2>
                     <div class="cta-buttons scroll-animate fade-in-up" data-delay="400">
-                        <a href="#examples" class="btn btn-primary">View Examples</a>
-                        <a href="https://github.com/yourusername/modal-component" class="btn btn-secondary">GitHub</a>
+                        <a href="#contact" class="btn btn-primary">Contact Me</a>
+                        <a href="#projects" class="btn btn-secondary">View Projects</a>
                     </div>
                 </div>
             </section>
 
-            <section id="features" class="section-scroll content-visibility" data-section="features">
-                <h2 class="section-heading scroll-animate fade-in">Features</h2>
-                <div class="features-grid scroll-animate fade-in-up" data-delay="200">
-                    <div class="feature-card">
-                        <h3>Lightweight</h3>
-                        <p>No dependencies, small footprint, and optimized for performance.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Accessible</h3>
-                        <p>ARIA attributes, keyboard navigation, and focus management.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Customizable</h3>
-                        <p>Easy to customize with CSS variables and modifiers.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Responsive</h3>
-                        <p>Works on all screen sizes and device types.</p>
-                    </div>
+            <section id="about" class="section-scroll content-visibility" data-section="about">
+                <h2 class="section-heading scroll-animate fade-in">About Me</h2>
+                <div class="about-content scroll-animate fade-in-up" data-delay="200">
+                    <p>Welcome to my portfolio! I'm a passionate full-stack web developer with expertise in creating responsive and user-friendly web applications.</p>
                 </div>
             </section>
 
-            <section id="examples" class="section-scroll content-visibility" data-section="examples">
-                <h2 class="section-heading scroll-animate fade-in">Examples</h2>
-                <div class="example-buttons scroll-animate fade-in-up" data-delay="200">
-                    <button class="btn btn-primary" data-modal-target="demo-modal-1">Basic Modal</button>
-                    <button class="btn" data-modal-target="demo-modal-2">Form Modal</button>
-                    <button class="btn" data-modal-target="demo-modal-3">Confirmation Modal</button>
-                    <a href="examples/modal-example.html" class="btn btn-secondary">View All Examples</a>
-                </div>
-                
-                <!-- Basic Demo Modal -->
-                <div id="demo-modal-1" class="modal" aria-hidden="true" role="dialog">
-                    <div class="modal-container">
-                        <div class="modal-header">
-                            <h3 class="modal-title">Basic Modal</h3>
-                            <button class="modal-close" aria-label="Close">&times;</button>
+            <section id="projects" class="section-scroll content-visibility" data-section="projects">
+                <h2 class="section-heading scroll-animate fade-in">My Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card scroll-animate fade-in-up" data-delay="100">
+                        <picture>
+                            <source srcset="images/project1.webp" type="image/webp">
+                            <source srcset="images/project1-small.webp" media="(max-width: 576px)" type="image/webp">
+                            <source srcset="images/project1-small.jpg" media="(max-width: 576px)" type="image/jpeg">
+                            <source srcset="images/project1-medium.webp" media="(max-width: 992px)" type="image/webp">
+                            <source srcset="images/project1-medium.jpg" media="(max-width: 992px)" type="image/jpeg">
+                            <img src="images/project1.jpg" alt="Project 1" loading="lazy" width="800" height="450" fetchpriority="low">
+                        </picture>
+                        <h3>E-Commerce Website</h3>
+                        <p>A fully responsive e-commerce platform with shopping cart functionality and payment integration.</p>
+                        <div class="tech-stack">
+                            <span class="badge">HTML</span>
+                            <span class="badge">CSS</span>
+                            <span class="badge">JavaScript</span>
+                            <span class="badge">React</span>
                         </div>
-                        <div class="modal-body">
-                            <p>This is a basic modal example with a simple content area.</p>
-                            <p>You can close this modal by clicking the X button, clicking outside the modal, or pressing the ESC key.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="modal-btn modal-btn-secondary" data-modal-close>Close</button>
-                            <button class="modal-btn modal-btn-primary">Save</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Form Demo Modal -->
-                <div id="demo-modal-2" class="modal" aria-hidden="true" role="dialog">
-                    <div class="modal-container">
-                        <div class="modal-header">
-                            <h3 class="modal-title">Form Modal</h3>
-                            <button class="modal-close" aria-label="Close">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="demo-form">
-                                <div class="modal-form-group">
-                                    <label for="demo-name">Name</label>
-                                    <input type="text" id="demo-name" class="modal-form-control" required>
-                                </div>
-                                <div class="modal-form-group">
-                                    <label for="demo-email">Email</label>
-                                    <input type="email" id="demo-email" class="modal-form-control" required>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="modal-btn modal-btn-secondary" data-modal-close>Cancel</button>
-                            <button class="modal-btn modal-btn-primary" type="submit" form="demo-form">Submit</button>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">Live Demo</a>
+                            <a href="#" class="btn btn-small btn-secondary">View Code</a>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Confirmation Demo Modal -->
-                <div id="demo-modal-3" class="modal modal-sm" aria-hidden="true" role="dialog">
-                    <div class="modal-container">
-                        <div class="modal-header">
-                            <h3 class="modal-title">Confirm Action</h3>
-                            <button class="modal-close" aria-label="Close">&times;</button>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card scroll-animate fade-in-up" data-delay="200">
+                        <picture>
+                            <source srcset="images/project2.webp" type="image/webp">
+                            <source srcset="images/project2-small.webp" media="(max-width: 576px)" type="image/webp">
+                            <source srcset="images/project2-small.jpg" media="(max-width: 576px)" type="image/jpeg">
+                            <source srcset="images/project2-medium.webp" media="(max-width: 992px)" type="image/webp">
+                            <source srcset="images/project2-medium.jpg" media="(max-width: 992px)" type="image/jpeg">
+                            <img src="images/project2.jpg" alt="Project 2" loading="lazy" width="800" height="450" fetchpriority="low">
+                        </picture>
+                        <h3>Task Management App</h3>
+                        <p>A task management application with drag-and-drop functionality, user authentication, and data persistence.</p>
+                        <div class="tech-stack">
+                            <span class="badge">React</span>
+                            <span class="badge">Node.js</span>
+                            <span class="badge">MongoDB</span>
+                            <span class="badge">Express</span>
                         </div>
-                        <div class="modal-body">
-                            <p>Are you sure you want to proceed with this action?</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">Live Demo</a>
+                            <a href="#" class="btn btn-small btn-secondary">View Code</a>
                         </div>
-                        <div class="modal-footer">
-                            <button class="modal-btn modal-btn-secondary" data-modal-close>Cancel</button>
-                            <button class="modal-btn modal-btn-danger">Delete</button>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card scroll-animate fade-in-up" data-delay="300">
+                        <picture>
+                            <source srcset="images/project3.webp" type="image/webp">
+                            <source srcset="images/project3-small.webp" media="(max-width: 576px)" type="image/webp">
+                            <source srcset="images/project3-small.jpg" media="(max-width: 576px)" type="image/jpeg">
+                            <source srcset="images/project3-medium.webp" media="(max-width: 992px)" type="image/webp">
+                            <source srcset="images/project3-medium.jpg" media="(max-width: 992px)" type="image/jpeg">
+                            <img src="images/project3.jpg" alt="Project 3" loading="lazy" width="800" height="450" fetchpriority="low">
+                        </picture>
+                        <h3>Weather Dashboard</h3>
+                        <p>A weather application that displays current and forecasted weather data using a third-party API.</p>
+                        <div class="tech-stack">
+                            <span class="badge">HTML</span>
+                            <span class="badge">CSS</span>
+                            <span class="badge">JavaScript</span>
+                            <span class="badge">API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">Live Demo</a>
+                            <a href="#" class="btn btn-small btn-secondary">View Code</a>
                         </div>
                     </div>
                 </div>
             </section>
             
-            <section id="installation" class="section-scroll content-visibility">
-                <h2 class="section-heading scroll-animate fade-in">Installation</h2>
-                <div class="code-examples scroll-animate fade-in-up" data-delay="200">
-                    <pre><code>// 1. Include the CSS and JavaScript files
-&lt;link rel="stylesheet" href="css/modal.css"&gt;
-&lt;script src="js/modal.js"&gt;&lt;/script&gt;
-
-// 2. Initialize the Modal library
-document.addEventListener('DOMContentLoaded', function() {
-    Modal.init();
-});</code></pre>
-                    <a href="https://github.com/yourusername/modal-component" class="btn btn-primary">View Documentation</a>
+            <section id="contact" class="section-scroll content-visibility" data-section="contact">
+                <h2 class="section-heading scroll-animate fade-in">Contact Me</h2>
+                <div class="contact-container scroll-animate fade-in-up" data-delay="200">
+                    <form name="contact" method="POST" data-netlify="true" class="contact-form" id="contactForm">
+                        <div class="form-status" aria-live="polite">
+                            <!-- Success and error messages will appear here -->
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required aria-required="true" class="pristine">
+                            <div class="error-message" id="nameError" aria-live="polite"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required aria-required="true" class="pristine">
+                            <div class="error-message" id="emailError" aria-live="polite"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required aria-required="true" class="pristine"></textarea>
+                            <div class="error-message" id="messageError" aria-live="polite"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span>Send Message</span>
+                            <div class="loader" aria-hidden="true"></div>
+                        </button>
+                        
+                        <!-- Netlify form handling -->
+                        <input type="hidden" name="form-name" value="contact">
+                        
+                        <!-- Thank You Overlay -->
+                        <div class="form-overlay" id="formThankYou">
+                            <div class="form-overlay-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path></svg>
+                            </div>
+                            <h3 class="form-overlay-message">Thank You!</h3>
+                            <p class="form-overlay-details">Your message has been sent successfully. I'll get back to you as soon as possible.</p>
+                            <button type="button" class="btn btn-primary form-overlay-button" id="formCloseButton">Close</button>
+                        </div>
+                    </form>
                 </div>
             </section>
         </div>
@@ -281,12 +298,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <footer>
         <div class="container">
-            <p>&copy; 2023 Modal Component. Released under the MIT License.</p>
-            <div class="footer-links">
-                <a href="https://github.com/yourusername/modal-component">GitHub</a>
-                <a href="examples/modal-example.html">Examples</a>
-                <a href="https://github.com/yourusername/modal-component/issues">Report Issues</a>
-            </div>
+            <p>&copy; 2023 Dipan Sen. All rights reserved.</p>
         </div>
     </footer>
 
@@ -295,15 +307,24 @@ document.addEventListener('DOMContentLoaded', function() {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>
     </button>
 
-    <!-- Main JavaScript -->
+    <!-- Main JavaScript deferred for performance -->
     <script src="js/script.js" defer></script>
-    <script src="js/modal.js" defer></script>
     
-    <!-- Initialize Modal Library -->
+    <!-- Lazy load non-critical JavaScript bundles -->
+    <script src="js/app.bundle.js" defer></script>
+    
+    <!-- Service Worker Registration -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            Modal.init();
-        });
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registered with scope:', registration.scope);
+                    }).catch(error => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
     </script>
 </body>
 </html> 
